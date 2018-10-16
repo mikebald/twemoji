@@ -1,928 +1,885 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Twitter Emoji (Twemoji) Preview</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html>
+<head>
     <style>
-    ul.emoji-list * {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-    ul.emoji-list li {
-      font-size: 36px;
-      float: left;
-      display: inline-block;
-      padding: 2px;
-      margin: 4px;
-    }
-    img.emoji {
-      cursor: pointer;
-      height: 1em;
-      width: 1em;
-      margin: 0 .05em 0 .1em;
-      vertical-align: -0.1em;
-    }
+        img { 
+            margin: 5px;
+        }
     </style>
-    <script src="//twemoji.maxcdn.com/twemoji.min.js"></script>
-  </head>
-  <body>
-    <ul class="emoji-list">
-      <li>&#x1F004;</li>
-      <li>&#x1F0CF;</li>
-      <li>&#x1F170;</li>
-      <li>&#x1F171;</li>
-      <li>&#x1F17E;</li>
-      <li>&#x1F17F;</li>
-      <li>&#x1F18E;</li>
-      <li>&#x1F191;</li>
-      <li>&#x1F192;</li>
-      <li>&#x1F193;</li>
-      <li>&#x1F194;</li>
-      <li>&#x1F195;</li>
-      <li>&#x1F196;</li>
-      <li>&#x1F197;</li>
-      <li>&#x1F198;</li>
-      <li>&#x1F199;</li>
-      <li>&#x1F19A;</li>
-      <li>&#x1F1E6;</li>
-      <li>&#x1F1E7;</li>
-      <li>&#x1F1E8;&#x1F1F3;</li>
-      <li>&#x1F1E8;</li>
-      <li>&#x1F1E9;&#x1F1EA;</li>
-      <li>&#x1F1E9;</li>
-      <li>&#x1F1EA;&#x1F1F8;</li>
-      <li>&#x1F1EA;</li>
-      <li>&#x1F1EB;&#x1F1F7;</li>
-      <li>&#x1F1EB;</li>
-      <li>&#x1F1EC;&#x1F1E7;</li>
-      <li>&#x1F1EC;</li>
-      <li>&#x1F1ED;</li>
-      <li>&#x1F1EE;&#x1F1F9;</li>
-      <li>&#x1F1EE;</li>
-      <li>&#x1F1EF;&#x1F1F5;</li>
-      <li>&#x1F1EF;</li>
-      <li>&#x1F1F0;&#x1F1F7;</li>
-      <li>&#x1F1F0;</li>
-      <li>&#x1F1F1;</li>
-      <li>&#x1F1F2;</li>
-      <li>&#x1F1F3;</li>
-      <li>&#x1F1F4;</li>
-      <li>&#x1F1F5;</li>
-      <li>&#x1F1F6;</li>
-      <li>&#x1F1F7;&#x1F1FA;</li>
-      <li>&#x1F1F7;</li>
-      <li>&#x1F1F8;</li>
-      <li>&#x1F1F9;</li>
-      <li>&#x1F1FA;&#x1F1F8;</li>
-      <li>&#x1F1FA;</li>
-      <li>&#x1F1FB;</li>
-      <li>&#x1F1FC;</li>
-      <li>&#x1F1FD;</li>
-      <li>&#x1F1FE;</li>
-      <li>&#x1F1FF;</li>
-      <li>&#x1F201;</li>
-      <li>&#x1F202;</li>
-      <li>&#x1F21A;</li>
-      <li>&#x1F22F;</li>
-      <li>&#x1F232;</li>
-      <li>&#x1F233;</li>
-      <li>&#x1F234;</li>
-      <li>&#x1F235;</li>
-      <li>&#x1F236;</li>
-      <li>&#x1F237;</li>
-      <li>&#x1F238;</li>
-      <li>&#x1F239;</li>
-      <li>&#x1F23A;</li>
-      <li>&#x1F250;</li>
-      <li>&#x1F251;</li>
-      <li>&#x1F300;</li>
-      <li>&#x1F301;</li>
-      <li>&#x1F302;</li>
-      <li>&#x1F303;</li>
-      <li>&#x1F304;</li>
-      <li>&#x1F305;</li>
-      <li>&#x1F306;</li>
-      <li>&#x1F307;</li>
-      <li>&#x1F308;</li>
-      <li>&#x1F309;</li>
-      <li>&#x1F30A;</li>
-      <li>&#x1F30B;</li>
-      <li>&#x1F30C;</li>
-      <li>&#x1F30D;</li>
-      <li>&#x1F30E;</li>
-      <li>&#x1F30F;</li>
-      <li>&#x1F310;</li>
-      <li>&#x1F311;</li>
-      <li>&#x1F312;</li>
-      <li>&#x1F313;</li>
-      <li>&#x1F314;</li>
-      <li>&#x1F315;</li>
-      <li>&#x1F316;</li>
-      <li>&#x1F317;</li>
-      <li>&#x1F318;</li>
-      <li>&#x1F319;</li>
-      <li>&#x1F31A;</li>
-      <li>&#x1F31B;</li>
-      <li>&#x1F31C;</li>
-      <li>&#x1F31D;</li>
-      <li>&#x1F31E;</li>
-      <li>&#x1F31F;</li>
-      <li>&#x1F320;</li>
-      <li>&#x1F330;</li>
-      <li>&#x1F331;</li>
-      <li>&#x1F332;</li>
-      <li>&#x1F333;</li>
-      <li>&#x1F334;</li>
-      <li>&#x1F335;</li>
-      <li>&#x1F337;</li>
-      <li>&#x1F338;</li>
-      <li>&#x1F339;</li>
-      <li>&#x1F33A;</li>
-      <li>&#x1F33B;</li>
-      <li>&#x1F33C;</li>
-      <li>&#x1F33D;</li>
-      <li>&#x1F33E;</li>
-      <li>&#x1F33F;</li>
-      <li>&#x1F340;</li>
-      <li>&#x1F341;</li>
-      <li>&#x1F342;</li>
-      <li>&#x1F343;</li>
-      <li>&#x1F344;</li>
-      <li>&#x1F345;</li>
-      <li>&#x1F346;</li>
-      <li>&#x1F347;</li>
-      <li>&#x1F348;</li>
-      <li>&#x1F349;</li>
-      <li>&#x1F34A;</li>
-      <li>&#x1F34B;</li>
-      <li>&#x1F34C;</li>
-      <li>&#x1F34D;</li>
-      <li>&#x1F34E;</li>
-      <li>&#x1F34F;</li>
-      <li>&#x1F350;</li>
-      <li>&#x1F351;</li>
-      <li>&#x1F352;</li>
-      <li>&#x1F353;</li>
-      <li>&#x1F354;</li>
-      <li>&#x1F355;</li>
-      <li>&#x1F356;</li>
-      <li>&#x1F357;</li>
-      <li>&#x1F358;</li>
-      <li>&#x1F359;</li>
-      <li>&#x1F35A;</li>
-      <li>&#x1F35B;</li>
-      <li>&#x1F35C;</li>
-      <li>&#x1F35D;</li>
-      <li>&#x1F35E;</li>
-      <li>&#x1F35F;</li>
-      <li>&#x1F360;</li>
-      <li>&#x1F361;</li>
-      <li>&#x1F362;</li>
-      <li>&#x1F363;</li>
-      <li>&#x1F364;</li>
-      <li>&#x1F365;</li>
-      <li>&#x1F366;</li>
-      <li>&#x1F367;</li>
-      <li>&#x1F368;</li>
-      <li>&#x1F369;</li>
-      <li>&#x1F36A;</li>
-      <li>&#x1F36B;</li>
-      <li>&#x1F36C;</li>
-      <li>&#x1F36D;</li>
-      <li>&#x1F36E;</li>
-      <li>&#x1F36F;</li>
-      <li>&#x1F370;</li>
-      <li>&#x1F371;</li>
-      <li>&#x1F372;</li>
-      <li>&#x1F373;</li>
-      <li>&#x1F374;</li>
-      <li>&#x1F375;</li>
-      <li>&#x1F376;</li>
-      <li>&#x1F377;</li>
-      <li>&#x1F378;</li>
-      <li>&#x1F379;</li>
-      <li>&#x1F37A;</li>
-      <li>&#x1F37B;</li>
-      <li>&#x1F37C;</li>
-      <li>&#x1F380;</li>
-      <li>&#x1F381;</li>
-      <li>&#x1F382;</li>
-      <li>&#x1F383;</li>
-      <li>&#x1F384;</li>
-      <li>&#x1F385;</li>
-      <li>&#x1F386;</li>
-      <li>&#x1F387;</li>
-      <li>&#x1F388;</li>
-      <li>&#x1F389;</li>
-      <li>&#x1F38A;</li>
-      <li>&#x1F38B;</li>
-      <li>&#x1F38C;</li>
-      <li>&#x1F38D;</li>
-      <li>&#x1F38E;</li>
-      <li>&#x1F38F;</li>
-      <li>&#x1F390;</li>
-      <li>&#x1F391;</li>
-      <li>&#x1F392;</li>
-      <li>&#x1F393;</li>
-      <li>&#x1F3A0;</li>
-      <li>&#x1F3A1;</li>
-      <li>&#x1F3A2;</li>
-      <li>&#x1F3A3;</li>
-      <li>&#x1F3A4;</li>
-      <li>&#x1F3A5;</li>
-      <li>&#x1F3A6;</li>
-      <li>&#x1F3A7;</li>
-      <li>&#x1F3A8;</li>
-      <li>&#x1F3A9;</li>
-      <li>&#x1F3AA;</li>
-      <li>&#x1F3AB;</li>
-      <li>&#x1F3AC;</li>
-      <li>&#x1F3AD;</li>
-      <li>&#x1F3AE;</li>
-      <li>&#x1F3AF;</li>
-      <li>&#x1F3B0;</li>
-      <li>&#x1F3B1;</li>
-      <li>&#x1F3B2;</li>
-      <li>&#x1F3B3;</li>
-      <li>&#x1F3B4;</li>
-      <li>&#x1F3B5;</li>
-      <li>&#x1F3B6;</li>
-      <li>&#x1F3B7;</li>
-      <li>&#x1F3B8;</li>
-      <li>&#x1F3B9;</li>
-      <li>&#x1F3BA;</li>
-      <li>&#x1F3BB;</li>
-      <li>&#x1F3BC;</li>
-      <li>&#x1F3BD;</li>
-      <li>&#x1F3BE;</li>
-      <li>&#x1F3BF;</li>
-      <li>&#x1F3C0;</li>
-      <li>&#x1F3C1;</li>
-      <li>&#x1F3C2;</li>
-      <li>&#x1F3C3;</li>
-      <li>&#x1F3C4;</li>
-      <li>&#x1F3C6;</li>
-      <li>&#x1F3C7;</li>
-      <li>&#x1F3C8;</li>
-      <li>&#x1F3C9;</li>
-      <li>&#x1F3CA;</li>
-      <li>&#x1F3E0;</li>
-      <li>&#x1F3E1;</li>
-      <li>&#x1F3E2;</li>
-      <li>&#x1F3E3;</li>
-      <li>&#x1F3E4;</li>
-      <li>&#x1F3E5;</li>
-      <li>&#x1F3E6;</li>
-      <li>&#x1F3E7;</li>
-      <li>&#x1F3E8;</li>
-      <li>&#x1F3E9;</li>
-      <li>&#x1F3EA;</li>
-      <li>&#x1F3EB;</li>
-      <li>&#x1F3EC;</li>
-      <li>&#x1F3ED;</li>
-      <li>&#x1F3EE;</li>
-      <li>&#x1F3EF;</li>
-      <li>&#x1F3F0;</li>
-      <li>&#x1F400;</li>
-      <li>&#x1F401;</li>
-      <li>&#x1F402;</li>
-      <li>&#x1F403;</li>
-      <li>&#x1F404;</li>
-      <li>&#x1F405;</li>
-      <li>&#x1F406;</li>
-      <li>&#x1F407;</li>
-      <li>&#x1F408;</li>
-      <li>&#x1F409;</li>
-      <li>&#x1F40A;</li>
-      <li>&#x1F40B;</li>
-      <li>&#x1F40C;</li>
-      <li>&#x1F40D;</li>
-      <li>&#x1F40E;</li>
-      <li>&#x1F40F;</li>
-      <li>&#x1F410;</li>
-      <li>&#x1F411;</li>
-      <li>&#x1F412;</li>
-      <li>&#x1F413;</li>
-      <li>&#x1F414;</li>
-      <li>&#x1F415;</li>
-      <li>&#x1F416;</li>
-      <li>&#x1F417;</li>
-      <li>&#x1F418;</li>
-      <li>&#x1F419;</li>
-      <li>&#x1F41A;</li>
-      <li>&#x1F41B;</li>
-      <li>&#x1F41C;</li>
-      <li>&#x1F41D;</li>
-      <li>&#x1F41E;</li>
-      <li>&#x1F41F;</li>
-      <li>&#x1F420;</li>
-      <li>&#x1F421;</li>
-      <li>&#x1F422;</li>
-      <li>&#x1F423;</li>
-      <li>&#x1F424;</li>
-      <li>&#x1F425;</li>
-      <li>&#x1F426;</li>
-      <li>&#x1F427;</li>
-      <li>&#x1F428;</li>
-      <li>&#x1F429;</li>
-      <li>&#x1F42A;</li>
-      <li>&#x1F42B;</li>
-      <li>&#x1F42C;</li>
-      <li>&#x1F42D;</li>
-      <li>&#x1F42E;</li>
-      <li>&#x1F42F;</li>
-      <li>&#x1F430;</li>
-      <li>&#x1F431;</li>
-      <li>&#x1F432;</li>
-      <li>&#x1F433;</li>
-      <li>&#x1F434;</li>
-      <li>&#x1F435;</li>
-      <li>&#x1F436;</li>
-      <li>&#x1F437;</li>
-      <li>&#x1F438;</li>
-      <li>&#x1F439;</li>
-      <li>&#x1F43A;</li>
-      <li>&#x1F43B;</li>
-      <li>&#x1F43C;</li>
-      <li>&#x1F43D;</li>
-      <li>&#x1F43E;</li>
-      <li>&#x1F440;</li>
-      <li>&#x1F442;</li>
-      <li>&#x1F443;</li>
-      <li>&#x1F444;</li>
-      <li>&#x1F445;</li>
-      <li>&#x1F446;</li>
-      <li>&#x1F447;</li>
-      <li>&#x1F448;</li>
-      <li>&#x1F449;</li>
-      <li>&#x1F44A;</li>
-      <li>&#x1F44B;</li>
-      <li>&#x1F44C;</li>
-      <li>&#x1F44D;</li>
-      <li>&#x1F44E;</li>
-      <li>&#x1F44F;</li>
-      <li>&#x1F450;</li>
-      <li>&#x1F451;</li>
-      <li>&#x1F452;</li>
-      <li>&#x1F453;</li>
-      <li>&#x1F454;</li>
-      <li>&#x1F455;</li>
-      <li>&#x1F456;</li>
-      <li>&#x1F457;</li>
-      <li>&#x1F458;</li>
-      <li>&#x1F459;</li>
-      <li>&#x1F45A;</li>
-      <li>&#x1F45B;</li>
-      <li>&#x1F45C;</li>
-      <li>&#x1F45D;</li>
-      <li>&#x1F45E;</li>
-      <li>&#x1F45F;</li>
-      <li>&#x1F460;</li>
-      <li>&#x1F461;</li>
-      <li>&#x1F462;</li>
-      <li>&#x1F463;</li>
-      <li>&#x1F464;</li>
-      <li>&#x1F465;</li>
-      <li>&#x1F466;</li>
-      <li>&#x1F467;</li>
-      <li>&#x1F468;</li>
-      <li>&#x1F469;</li>
-      <li>&#x1F46A;</li>
-      <li>&#x1F46B;</li>
-      <li>&#x1F46C;</li>
-      <li>&#x1F46D;</li>
-      <li>&#x1F46E;</li>
-      <li>&#x1F46F;</li>
-      <li>&#x1F470;</li>
-      <li>&#x1F471;</li>
-      <li>&#x1F472;</li>
-      <li>&#x1F473;</li>
-      <li>&#x1F474;</li>
-      <li>&#x1F475;</li>
-      <li>&#x1F476;</li>
-      <li>&#x1F477;</li>
-      <li>&#x1F478;</li>
-      <li>&#x1F479;</li>
-      <li>&#x1F47A;</li>
-      <li>&#x1F47B;</li>
-      <li>&#x1F47C;</li>
-      <li>&#x1F47D;</li>
-      <li>&#x1F47E;</li>
-      <li>&#x1F47F;</li>
-      <li>&#x1F480;</li>
-      <li>&#x1F481;</li>
-      <li>&#x1F482;</li>
-      <li>&#x1F483;</li>
-      <li>&#x1F484;</li>
-      <li>&#x1F485;</li>
-      <li>&#x1F486;</li>
-      <li>&#x1F487;</li>
-      <li>&#x1F488;</li>
-      <li>&#x1F489;</li>
-      <li>&#x1F48A;</li>
-      <li>&#x1F48B;</li>
-      <li>&#x1F48C;</li>
-      <li>&#x1F48D;</li>
-      <li>&#x1F48E;</li>
-      <li>&#x1F48F;</li>
-      <li>&#x1F490;</li>
-      <li>&#x1F491;</li>
-      <li>&#x1F492;</li>
-      <li>&#x1F493;</li>
-      <li>&#x1F494;</li>
-      <li>&#x1F495;</li>
-      <li>&#x1F496;</li>
-      <li>&#x1F497;</li>
-      <li>&#x1F498;</li>
-      <li>&#x1F499;</li>
-      <li>&#x1F49A;</li>
-      <li>&#x1F49B;</li>
-      <li>&#x1F49C;</li>
-      <li>&#x1F49D;</li>
-      <li>&#x1F49E;</li>
-      <li>&#x1F49F;</li>
-      <li>&#x1F4A0;</li>
-      <li>&#x1F4A1;</li>
-      <li>&#x1F4A2;</li>
-      <li>&#x1F4A3;</li>
-      <li>&#x1F4A4;</li>
-      <li>&#x1F4A5;</li>
-      <li>&#x1F4A6;</li>
-      <li>&#x1F4A7;</li>
-      <li>&#x1F4A8;</li>
-      <li>&#x1F4A9;</li>
-      <li>&#x1F4AA;</li>
-      <li>&#x1F4AB;</li>
-      <li>&#x1F4AC;</li>
-      <li>&#x1F4AD;</li>
-      <li>&#x1F4AE;</li>
-      <li>&#x1F4AF;</li>
-      <li>&#x1F4B0;</li>
-      <li>&#x1F4B1;</li>
-      <li>&#x1F4B2;</li>
-      <li>&#x1F4B3;</li>
-      <li>&#x1F4B4;</li>
-      <li>&#x1F4B5;</li>
-      <li>&#x1F4B6;</li>
-      <li>&#x1F4B7;</li>
-      <li>&#x1F4B8;</li>
-      <li>&#x1F4B9;</li>
-      <li>&#x1F4BA;</li>
-      <li>&#x1F4BB;</li>
-      <li>&#x1F4BC;</li>
-      <li>&#x1F4BD;</li>
-      <li>&#x1F4BE;</li>
-      <li>&#x1F4BF;</li>
-      <li>&#x1F4C0;</li>
-      <li>&#x1F4C1;</li>
-      <li>&#x1F4C2;</li>
-      <li>&#x1F4C3;</li>
-      <li>&#x1F4C4;</li>
-      <li>&#x1F4C5;</li>
-      <li>&#x1F4C6;</li>
-      <li>&#x1F4C7;</li>
-      <li>&#x1F4C8;</li>
-      <li>&#x1F4C9;</li>
-      <li>&#x1F4CA;</li>
-      <li>&#x1F4CB;</li>
-      <li>&#x1F4CC;</li>
-      <li>&#x1F4CD;</li>
-      <li>&#x1F4CE;</li>
-      <li>&#x1F4CF;</li>
-      <li>&#x1F4D0;</li>
-      <li>&#x1F4D1;</li>
-      <li>&#x1F4D2;</li>
-      <li>&#x1F4D3;</li>
-      <li>&#x1F4D4;</li>
-      <li>&#x1F4D5;</li>
-      <li>&#x1F4D6;</li>
-      <li>&#x1F4D7;</li>
-      <li>&#x1F4D8;</li>
-      <li>&#x1F4D9;</li>
-      <li>&#x1F4DA;</li>
-      <li>&#x1F4DB;</li>
-      <li>&#x1F4DC;</li>
-      <li>&#x1F4DD;</li>
-      <li>&#x1F4DE;</li>
-      <li>&#x1F4DF;</li>
-      <li>&#x1F4E0;</li>
-      <li>&#x1F4E1;</li>
-      <li>&#x1F4E2;</li>
-      <li>&#x1F4E3;</li>
-      <li>&#x1F4E4;</li>
-      <li>&#x1F4E5;</li>
-      <li>&#x1F4E6;</li>
-      <li>&#x1F4E7;</li>
-      <li>&#x1F4E8;</li>
-      <li>&#x1F4E9;</li>
-      <li>&#x1F4EA;</li>
-      <li>&#x1F4EB;</li>
-      <li>&#x1F4EC;</li>
-      <li>&#x1F4ED;</li>
-      <li>&#x1F4EE;</li>
-      <li>&#x1F4EF;</li>
-      <li>&#x1F4F0;</li>
-      <li>&#x1F4F1;</li>
-      <li>&#x1F4F2;</li>
-      <li>&#x1F4F3;</li>
-      <li>&#x1F4F4;</li>
-      <li>&#x1F4F5;</li>
-      <li>&#x1F4F6;</li>
-      <li>&#x1F4F7;</li>
-      <li>&#x1F4F9;</li>
-      <li>&#x1F4FA;</li>
-      <li>&#x1F4FB;</li>
-      <li>&#x1F4FC;</li>
-      <li>&#x1F500;</li>
-      <li>&#x1F501;</li>
-      <li>&#x1F502;</li>
-      <li>&#x1F503;</li>
-      <li>&#x1F504;</li>
-      <li>&#x1F505;</li>
-      <li>&#x1F506;</li>
-      <li>&#x1F507;</li>
-      <li>&#x1F508;</li>
-      <li>&#x1F509;</li>
-      <li>&#x1F50A;</li>
-      <li>&#x1F50B;</li>
-      <li>&#x1F50C;</li>
-      <li>&#x1F50D;</li>
-      <li>&#x1F50E;</li>
-      <li>&#x1F50F;</li>
-      <li>&#x1F510;</li>
-      <li>&#x1F511;</li>
-      <li>&#x1F512;</li>
-      <li>&#x1F513;</li>
-      <li>&#x1F514;</li>
-      <li>&#x1F515;</li>
-      <li>&#x1F516;</li>
-      <li>&#x1F517;</li>
-      <li>&#x1F518;</li>
-      <li>&#x1F519;</li>
-      <li>&#x1F51A;</li>
-      <li>&#x1F51B;</li>
-      <li>&#x1F51C;</li>
-      <li>&#x1F51D;</li>
-      <li>&#x1F51E;</li>
-      <li>&#x1F51F;</li>
-      <li>&#x1F520;</li>
-      <li>&#x1F521;</li>
-      <li>&#x1F522;</li>
-      <li>&#x1F523;</li>
-      <li>&#x1F524;</li>
-      <li>&#x1F525;</li>
-      <li>&#x1F526;</li>
-      <li>&#x1F527;</li>
-      <li>&#x1F528;</li>
-      <li>&#x1F529;</li>
-      <li>&#x1F52A;</li>
-      <li>&#x1F52B;</li>
-      <li>&#x1F52C;</li>
-      <li>&#x1F52D;</li>
-      <li>&#x1F52E;</li>
-      <li>&#x1F52F;</li>
-      <li>&#x1F530;</li>
-      <li>&#x1F531;</li>
-      <li>&#x1F532;</li>
-      <li>&#x1F533;</li>
-      <li>&#x1F534;</li>
-      <li>&#x1F535;</li>
-      <li>&#x1F536;</li>
-      <li>&#x1F537;</li>
-      <li>&#x1F538;</li>
-      <li>&#x1F539;</li>
-      <li>&#x1F53A;</li>
-      <li>&#x1F53B;</li>
-      <li>&#x1F53C;</li>
-      <li>&#x1F53D;</li>
-      <li>&#x1F550;</li>
-      <li>&#x1F551;</li>
-      <li>&#x1F552;</li>
-      <li>&#x1F553;</li>
-      <li>&#x1F554;</li>
-      <li>&#x1F555;</li>
-      <li>&#x1F556;</li>
-      <li>&#x1F557;</li>
-      <li>&#x1F558;</li>
-      <li>&#x1F559;</li>
-      <li>&#x1F55A;</li>
-      <li>&#x1F55B;</li>
-      <li>&#x1F55C;</li>
-      <li>&#x1F55D;</li>
-      <li>&#x1F55E;</li>
-      <li>&#x1F55F;</li>
-      <li>&#x1F560;</li>
-      <li>&#x1F561;</li>
-      <li>&#x1F562;</li>
-      <li>&#x1F563;</li>
-      <li>&#x1F564;</li>
-      <li>&#x1F565;</li>
-      <li>&#x1F566;</li>
-      <li>&#x1F567;</li>
-      <li>&#x1F5FB;</li>
-      <li>&#x1F5FC;</li>
-      <li>&#x1F5FD;</li>
-      <li>&#x1F5FE;</li>
-      <li>&#x1F5FF;</li>
-      <li>&#x1F600;</li>
-      <li>&#x1F601;</li>
-      <li>&#x1F602;</li>
-      <li>&#x1F603;</li>
-      <li>&#x1F604;</li>
-      <li>&#x1F605;</li>
-      <li>&#x1F606;</li>
-      <li>&#x1F607;</li>
-      <li>&#x1F608;</li>
-      <li>&#x1F609;</li>
-      <li>&#x1F60A;</li>
-      <li>&#x1F60B;</li>
-      <li>&#x1F60C;</li>
-      <li>&#x1F60D;</li>
-      <li>&#x1F60E;</li>
-      <li>&#x1F60F;</li>
-      <li>&#x1F610;</li>
-      <li>&#x1F611;</li>
-      <li>&#x1F612;</li>
-      <li>&#x1F613;</li>
-      <li>&#x1F614;</li>
-      <li>&#x1F615;</li>
-      <li>&#x1F616;</li>
-      <li>&#x1F617;</li>
-      <li>&#x1F618;</li>
-      <li>&#x1F619;</li>
-      <li>&#x1F61A;</li>
-      <li>&#x1F61B;</li>
-      <li>&#x1F61C;</li>
-      <li>&#x1F61D;</li>
-      <li>&#x1F61E;</li>
-      <li>&#x1F61F;</li>
-      <li>&#x1F620;</li>
-      <li>&#x1F621;</li>
-      <li>&#x1F622;</li>
-      <li>&#x1F623;</li>
-      <li>&#x1F624;</li>
-      <li>&#x1F625;</li>
-      <li>&#x1F626;</li>
-      <li>&#x1F627;</li>
-      <li>&#x1F628;</li>
-      <li>&#x1F629;</li>
-      <li>&#x1F62A;</li>
-      <li>&#x1F62B;</li>
-      <li>&#x1F62C;</li>
-      <li>&#x1F62D;</li>
-      <li>&#x1F62E;</li>
-      <li>&#x1F62F;</li>
-      <li>&#x1F630;</li>
-      <li>&#x1F631;</li>
-      <li>&#x1F632;</li>
-      <li>&#x1F633;</li>
-      <li>&#x1F634;</li>
-      <li>&#x1F635;</li>
-      <li>&#x1F636;</li>
-      <li>&#x1F637;</li>
-      <li>&#x1F638;</li>
-      <li>&#x1F639;</li>
-      <li>&#x1F63A;</li>
-      <li>&#x1F63B;</li>
-      <li>&#x1F63C;</li>
-      <li>&#x1F63D;</li>
-      <li>&#x1F63E;</li>
-      <li>&#x1F63F;</li>
-      <li>&#x1F640;</li>
-      <li>&#x1F641;</li>
-      <li>&#x1F642;</li>
-      <li>&#x1F645;</li>
-      <li>&#x1F646;</li>
-      <li>&#x1F647;</li>
-      <li>&#x1F648;</li>
-      <li>&#x1F649;</li>
-      <li>&#x1F64A;</li>
-      <li>&#x1F64B;</li>
-      <li>&#x1F64C;</li>
-      <li>&#x1F64D;</li>
-      <li>&#x1F64E;</li>
-      <li>&#x1F64F;</li>
-      <li>&#x1F680;</li>
-      <li>&#x1F681;</li>
-      <li>&#x1F682;</li>
-      <li>&#x1F683;</li>
-      <li>&#x1F684;</li>
-      <li>&#x1F685;</li>
-      <li>&#x1F686;</li>
-      <li>&#x1F687;</li>
-      <li>&#x1F688;</li>
-      <li>&#x1F689;</li>
-      <li>&#x1F68A;</li>
-      <li>&#x1F68B;</li>
-      <li>&#x1F68C;</li>
-      <li>&#x1F68D;</li>
-      <li>&#x1F68E;</li>
-      <li>&#x1F68F;</li>
-      <li>&#x1F690;</li>
-      <li>&#x1F691;</li>
-      <li>&#x1F692;</li>
-      <li>&#x1F693;</li>
-      <li>&#x1F694;</li>
-      <li>&#x1F695;</li>
-      <li>&#x1F696;</li>
-      <li>&#x1F697;</li>
-      <li>&#x1F698;</li>
-      <li>&#x1F699;</li>
-      <li>&#x1F69A;</li>
-      <li>&#x1F69B;</li>
-      <li>&#x1F69C;</li>
-      <li>&#x1F69D;</li>
-      <li>&#x1F69E;</li>
-      <li>&#x1F69F;</li>
-      <li>&#x1F6A0;</li>
-      <li>&#x1F6A1;</li>
-      <li>&#x1F6A2;</li>
-      <li>&#x1F6A3;</li>
-      <li>&#x1F6A4;</li>
-      <li>&#x1F6A5;</li>
-      <li>&#x1F6A6;</li>
-      <li>&#x1F6A7;</li>
-      <li>&#x1F6A8;</li>
-      <li>&#x1F6A9;</li>
-      <li>&#x1F6AA;</li>
-      <li>&#x1F6AB;</li>
-      <li>&#x1F6AC;</li>
-      <li>&#x1F6AD;</li>
-      <li>&#x1F6AE;</li>
-      <li>&#x1F6AF;</li>
-      <li>&#x1F6B0;</li>
-      <li>&#x1F6B1;</li>
-      <li>&#x1F6B2;</li>
-      <li>&#x1F6B3;</li>
-      <li>&#x1F6B4;</li>
-      <li>&#x1F6B5;</li>
-      <li>&#x1F6B6;</li>
-      <li>&#x1F6B7;</li>
-      <li>&#x1F6B8;</li>
-      <li>&#x1F6B9;</li>
-      <li>&#x1F6BA;</li>
-      <li>&#x1F6BB;</li>
-      <li>&#x1F6BC;</li>
-      <li>&#x1F6BD;</li>
-      <li>&#x1F6BE;</li>
-      <li>&#x1F6BF;</li>
-      <li>&#x1F6C0;</li>
-      <li>&#x1F6C1;</li>
-      <li>&#x1F6C2;</li>
-      <li>&#x1F6C3;</li>
-      <li>&#x1F6C4;</li>
-      <li>&#x1F6C5;</li>
-      <li>&#x203C;</li>
-      <li>&#x2049;</li>
-      <li>&#x2122;</li>
-      <li>&#x2139;</li>
-      <li>&#x2194;</li>
-      <li>&#x2195;</li>
-      <li>&#x2196;</li>
-      <li>&#x2197;</li>
-      <li>&#x2198;</li>
-      <li>&#x2199;</li>
-      <li>&#x21A9;</li>
-      <li>&#x21AA;</li>
-      <li>&#x23;&#x20E3;</li>
-      <li>&#x231A;</li>
-      <li>&#x231B;</li>
-      <li>&#x23E9;</li>
-      <li>&#x23EA;</li>
-      <li>&#x23EB;</li>
-      <li>&#x23EC;</li>
-      <li>&#x23F0;</li>
-      <li>&#x23F3;</li>
-      <li>&#x24C2;</li>
-      <li>&#x25AA;</li>
-      <li>&#x25AB;</li>
-      <li>&#x25B6;</li>
-      <li>&#x25C0;</li>
-      <li>&#x25FB;</li>
-      <li>&#x25FC;</li>
-      <li>&#x25FD;</li>
-      <li>&#x25FE;</li>
-      <li>&#x2600;</li>
-      <li>&#x2601;</li>
-      <li>&#x260E;</li>
-      <li>&#x2611;</li>
-      <li>&#x2614;</li>
-      <li>&#x2615;</li>
-      <li>&#x261D;</li>
-      <li>&#x263A;</li>
-      <li>&#x2648;</li>
-      <li>&#x2649;</li>
-      <li>&#x264A;</li>
-      <li>&#x264B;</li>
-      <li>&#x264C;</li>
-      <li>&#x264D;</li>
-      <li>&#x264E;</li>
-      <li>&#x264F;</li>
-      <li>&#x2650;</li>
-      <li>&#x2651;</li>
-      <li>&#x2652;</li>
-      <li>&#x2653;</li>
-      <li>&#x2660;</li>
-      <li>&#x2663;</li>
-      <li>&#x2665;</li>
-      <li>&#x2666;</li>
-      <li>&#x2668;</li>
-      <li>&#x267B;</li>
-      <li>&#x267F;</li>
-      <li>&#x2693;</li>
-      <li>&#x26A0;</li>
-      <li>&#x26A1;</li>
-      <li>&#x26AA;</li>
-      <li>&#x26AB;</li>
-      <li>&#x26BD;</li>
-      <li>&#x26BE;</li>
-      <li>&#x26C4;</li>
-      <li>&#x26C5;</li>
-      <li>&#x26CE;</li>
-      <li>&#x26D4;</li>
-      <li>&#x26EA;</li>
-      <li>&#x26F2;</li>
-      <li>&#x26F3;</li>
-      <li>&#x26F5;</li>
-      <li>&#x26FA;</li>
-      <li>&#x26FD;</li>
-      <li>&#x2702;</li>
-      <li>&#x2705;</li>
-      <li>&#x2708;</li>
-      <li>&#x2709;</li>
-      <li>&#x270A;</li>
-      <li>&#x270B;</li>
-      <li>&#x270C;</li>
-      <li>&#x270F;</li>
-      <li>&#x2712;</li>
-      <li>&#x2714;</li>
-      <li>&#x2716;</li>
-      <li>&#x2728;</li>
-      <li>&#x2733;</li>
-      <li>&#x2734;</li>
-      <li>&#x2744;</li>
-      <li>&#x2747;</li>
-      <li>&#x274C;</li>
-      <li>&#x274E;</li>
-      <li>&#x2753;</li>
-      <li>&#x2754;</li>
-      <li>&#x2755;</li>
-      <li>&#x2757;</li>
-      <li>&#x2764;</li>
-      <li>&#x2795;</li>
-      <li>&#x2796;</li>
-      <li>&#x2797;</li>
-      <li>&#x27A1;</li>
-      <li>&#x27B0;</li>
-      <li>&#x27BF;</li>
-      <li>&#x2934;</li>
-      <li>&#x2935;</li>
-      <li>&#x2B05;</li>
-      <li>&#x2B06;</li>
-      <li>&#x2B07;</li>
-      <li>&#x2B1B;</li>
-      <li>&#x2B1C;</li>
-      <li>&#x2B50;</li>
-      <li>&#x2B55;</li>
-      <li>&#x30;&#x20E3;</li>
-      <li>&#x3030;</li>
-      <li>&#x303D;</li>
-      <li>&#x31;&#x20E3;</li>
-      <li>&#x32;&#x20E3;</li>
-      <li>&#x3297;</li>
-      <li>&#x3299;</li>
-      <li>&#x33;&#x20E3;</li>
-      <li>&#x34;&#x20E3;</li>
-      <li>&#x35;&#x20E3;</li>
-      <li>&#x36;&#x20E3;</li>
-      <li>&#x37;&#x20E3;</li>
-      <li>&#x38;&#x20E3;</li>
-      <li>&#x39;&#x20E3;</li>
-      <li>&#xA9;</li>
-      <li>&#xAE;</li>
-      <li>&#xE50A;</li>
-    </ul>
-    <script>
-    var ul = document.getElementsByTagName('ul')[0];
-    var total = ul.getElementsByTagName('li').length;
-    var elapsed = +new Date;
-    twemoji.parse(ul, {"size":72});
-    elapsed = (+new Date) - elapsed;
-    document.body.insertBefore(
-      document.createTextNode(total + ' emoji parsed in ' + elapsed + 'ms'),
-      document.body.firstChild
-    );
-    (function (img, metaKey, i) {
-      function copyToClipboard(e) {
-        prompt('Copy to clipboard via ' + metaKey + '+C and Enter', this.alt);
-      }
-      for (i = 0; i < img.length; img[i++].onclick = copyToClipboard) {}
-    }(
-      document.getElementsByTagName('img'),
-      /\b(?:Mac |i)OS\b/i.test(navigator.userAgent) ? 'Command' : 'Ctrl'
-    ));
-    </script>
-  </body>
+</head>
+<body>
+    <div>
+        <img src="72x72\1f004.png" title="1f004.png" />
+        <img src="72x72\1f0cf.png" title="1f0cf.png" />
+        <img src="72x72\1f170.png" title="1f170.png" />
+        <img src="72x72\1f171.png" title="1f171.png" />
+        <img src="72x72\1f17e.png" title="1f17e.png" />
+        <img src="72x72\1f17f.png" title="1f17f.png" />
+        <img src="72x72\1f18e.png" title="1f18e.png" />
+        <img src="72x72\1f191.png" title="1f191.png" /><br />
+        <img src="72x72\1f192.png" title="1f192.png" />
+        <img src="72x72\1f193.png" title="" />
+        <img src="72x72\1f194.png" title="1f194.png" />
+        <img src="72x72\1f195.png" title="1f195.png" />
+        <img src="72x72\1f196.png" title="1f196.png" />
+        <img src="72x72\1f197.png" title="1f197.png" />
+        <img src="72x72\1f198.png" title="1f198.png" />
+        <img src="72x72\1f199.png" title="1f198.png" /><br />
+        <img src="72x72\1f19a.png" title="1f19a.png" />
+        <img src="72x72\1f1e6.png" title="1f19a.png" />
+        <img src="72x72\1f1e7.png" title="1f1e7.png" />
+        <img src="72x72\1f1e8-1f1f3.png" title="1f1e8-1f1f3.png" />
+        <img src="72x72\1f1e8.png" title="1f1e8.png" />
+        <img src="72x72\1f1e9-1f1ea.png" title="1f1e9-1f1ea.png" />
+        <img src="72x72\1f1e9.png" title="1f1e9.png" />
+        <img src="72x72\1f1ea-1f1f8.png" title="1f1ea-1f1f8.png" /><br />
+        <img src="72x72\1f1ea.png" title="1f1ea.png" />
+        <img src="72x72\1f1eb-1f1f7.png" title="1f1ea.png" />
+        <img src="72x72\1f1eb.png" title="1f1eb.png" />
+        <img src="72x72\1f1ec-1f1e7.png" title="1f1ec-1f1e7.png" />
+        <img src="72x72\1f1ec.png" title="1f1ec.png" />
+        <img src="72x72\1f1ed.png" title="" />
+        <img src="72x72\1f1ee-1f1f9.png" title="1f1ee-1f1f9.png" />
+        <img src="72x72\1f1ee.png" title="1f1ee.png" /><br />
+        <img src="72x72\1f1ef-1f1f5.png" title="1f1ef-1f1f5.png" />
+        <img src="72x72\1f1ef.png" title="1f1ef.png" />
+        <img src="72x72\1f1f0-1f1f7.png" title="1f1f0-1f1f7.png" />
+        <img src="72x72\1f1f0.png" title="1f1f0-1f1f7.png" />
+        <img src="72x72\1f1f1.png" title="1f1f1.png" />
+        <img src="72x72\1f1f2.png" title="1f1f2.png" />
+        <img src="72x72\1f1f3.png" title="1f1f3.png" />
+        <img src="72x72\1f1f4.png" title="1f1f4.png" /><br />
+        <img src="72x72\1f1f5.png" title="1f1f5.png" />
+        <img src="72x72\1f1f6.png" title="1f1f6.png" />
+        <img src="72x72\1f1f7-1f1fa.png" title="1f1f7-1f1fa.png" />
+        <img src="72x72\1f1f7.png" title="1f1f7.png" />
+        <img src="72x72\1f1f8.png" title="1f1f8.png" />
+        <img src="72x72\1f1f9.png" title="1f1f9.png" />
+        <img src="72x72\1f1fa-1f1f8.png" title="1f1fa-1f1f8.png" />
+        <img src="72x72\1f1fa.png" title="1f1fa.png" /><br />
+        <img src="72x72\1f1fb.png" title="1f1fb.png" />
+        <img src="72x72\1f1fc.png" title="" />
+        <img src="72x72\1f1fd.png" title="1f1fd.png" />
+        <img src="72x72\1f1fe.png" title="1f1fe.png" />
+        <img src="72x72\1f1ff.png" title="1f1ff.png" />
+        <img src="72x72\1f201.png" title="1f201.png" />
+        <img src="72x72\1f202.png" title="1f202.png" />
+        <img src="72x72\1f21a.png" title="1f21a.png" /><br />
+        <img src="72x72\1f22f.png" title="1f22f.png" />
+        <img src="72x72\1f232.png" title="1f232.png" />
+        <img src="72x72\1f233.png" title="1f233.png" />
+        <img src="72x72\1f234.png" title="1f234.png" />
+        <img src="72x72\1f235.png" title="1f234.png" />
+        <img src="72x72\1f236.png" title="1f236.png" />
+        <img src="72x72\1f237.png" title="1f237.png" />
+        <img src="72x72\1f238.png" title="1f238.png" /><br />
+        <img src="72x72\1f239.png" title="1f238.png" />
+        <img src="72x72\1f23a.png" title="" />
+        <img src="72x72\1f250.png" title="1f250.png" />
+        <img src="72x72\1f251.png" title="1f251.png" />
+        <img src="72x72\1f300.png" title="1f300.png" />
+        <img src="72x72\1f301.png" title="1f301.png" />
+        <img src="72x72\1f302.png" title="1f302.png" />
+        <img src="72x72\1f303.png" title="1f303.png" /><br />
+        <img src="72x72\1f304.png" title="1f304.png" />
+        <img src="72x72\1f305.png" title="1f305.png" />
+        <img src="72x72\1f306.png" title="1f306.png" />
+        <img src="72x72\1f307.png" title="1f307.png" />
+        <img src="72x72\1f308.png" title="1f308.png" />
+        <img src="72x72\1f309.png" title="1f308.png" />
+        <img src="72x72\1f30a.png" title="1f30a.png" />
+        <img src="72x72\1f30b.png" title="1f30b.png" /><br />
+        <img src="72x72\1f30c.png" title="1f30c.png" />
+        <img src="72x72\1f30d.png" title="1f30d.png" />
+        <img src="72x72\1f30e.png" title="1f30e.png" />
+        <img src="72x72\1f30f.png" title="1f30f.png" />
+        <img src="72x72\1f310.png" title="1f30f.png" />
+        <img src="72x72\1f311.png" title="" />
+        <img src="72x72\1f312.png" title="1f312.png" />
+        <img src="72x72\1f313.png" title="1f313.png" /><br />
+        <img src="72x72\1f314.png" title="1f314.png" />
+        <img src="72x72\1f315.png" title="1f315.png" />
+        <img src="72x72\1f316.png" title="1f316.png" />
+        <img src="72x72\1f317.png" title="1f317.png" />
+        <img src="72x72\1f318.png" title="1f318.png" />
+        <img src="72x72\1f319.png" title="1f319.png" />
+        <img src="72x72\1f31a.png" title="1f31a.png" />
+        <img src="72x72\1f31b.png" title="1f31b.png" /><br />
+        <img src="72x72\1f31c.png" title="1f31c.png" />
+        <img src="72x72\1f31d.png" title="1f31c.png" />
+        <img src="72x72\1f31e.png" title="1f31e.png" />
+        <img src="72x72\1f31f.png" title="1f31f.png" />
+        <img src="72x72\1f320.png" title="1f320.png" />
+        <img src="72x72\1f330.png" title="1f330.png" />
+        <img src="72x72\1f331.png" title="1f331.png" />
+        <img src="72x72\1f332.png" title="1f332.png" /><br />
+        <img src="72x72\1f333.png" title="1f333.png" />
+        <img src="72x72\1f334.png" title="1f334.png" />
+        <img src="72x72\1f335.png" title="1f335.png" />
+        <img src="72x72\1f337.png" title="1f337.png" />
+        <img src="72x72\1f338.png" title="1f338.png" />
+        <img src="72x72\1f339.png" title="1f339.png" />
+        <img src="72x72\1f33a.png" title="1f33a.png" />
+        <img src="72x72\1f33b.png" title="1f33b.png" /><br />
+        <img src="72x72\1f33c.png" title="1f33b.png" />
+        <img src="72x72\1f33d.png" title="1f33d.png" />
+        <img src="72x72\1f33e.png" title="1f33e.png" />
+        <img src="72x72\1f33f.png" title="1f33f.png" />
+        <img src="72x72\1f340.png" title="1f340.png" />
+        <img src="72x72\1f341.png" title="1f341.png" />
+        <img src="72x72\1f342.png" title="1f342.png" />
+        <img src="72x72\1f343.png" title="1f342.png" /><br />
+        <img src="72x72\1f344.png" title="1f344.png" />
+        <img src="72x72\1f345.png" title="1f345.png" />
+        <img src="72x72\1f346.png" title="1f345.png" />
+        <img src="72x72\1f347.png" title="1f347.png" />
+        <img src="72x72\1f348.png" title="1f348.png" />
+        <img src="72x72\1f349.png" title="1f349.png" />
+        <img src="72x72\1f34a.png" title="1f34a.png" />
+        <img src="72x72\1f34b.png" title="1f34a.png" /><br />
+        <img src="72x72\1f34c.png" title="1f34c.png" />
+        <img src="72x72\1f34d.png" title="1f34d.png" />
+        <img src="72x72\1f34e.png" title="1f34e.png" />
+        <img src="72x72\1f34f.png" title="1f34f.png" />
+        <img src="72x72\1f350.png" title="1f350.png" />
+        <img src="72x72\1f351.png" title="1f351.png" />
+        <img src="72x72\1f352.png" title="1f352.png" />
+        <img src="72x72\1f353.png" title="1f353.png" /><br />
+        <img src="72x72\1f354.png" title="1f354.png" />
+        <img src="72x72\1f355.png" title="1f355.png" />
+        <img src="72x72\1f356.png" title="1f356.png" />
+        <img src="72x72\1f357.png" title="1f357.png" />
+        <img src="72x72\1f358.png" title="1f358.png" />
+        <img src="72x72\1f359.png" title="1f359.png" />
+        <img src="72x72\1f35a.png" title="1f35a.png" />
+        <img src="72x72\1f35b.png" title="1f35b.png" /><br />
+        <img src="72x72\1f35c.png" title="1f35b.png" />
+        <img src="72x72\1f35d.png" title="" />
+        <img src="72x72\1f35e.png" title="1f35e.png" />
+        <img src="72x72\1f35f.png" title="1f35f.png" />
+        <img src="72x72\1f360.png" title="1f35f.png" />
+        <img src="72x72\1f361.png" title="1f361.png" />
+        <img src="72x72\1f362.png" title="1f362.png" />
+        <img src="72x72\1f363.png" title="1f363.png" /><br />
+        <img src="72x72\1f364.png" title="1f363.png" />
+        <img src="72x72\1f365.png" title="1f365.png" />
+        <img src="72x72\1f366.png" title="1f366.png" />
+        <img src="72x72\1f367.png" title="1f367.png" />
+        <img src="72x72\1f368.png" title="1f367.png" />
+        <img src="72x72\1f369.png" title="1f369.png" />
+        <img src="72x72\1f36a.png" title="1f36a.png" />
+        <img src="72x72\1f36b.png" title="1f36b.png" /><br />
+        <img src="72x72\1f36c.png" title="1f36c.png" />
+        <img src="72x72\1f36d.png" title="1f36d.png" />
+        <img src="72x72\1f36e.png" title="1f36e.png" />
+        <img src="72x72\1f36f.png" title="1f36f.png" />
+        <img src="72x72\1f370.png" title="1f370.png" />
+        <img src="72x72\1f371.png" title="1f371.png" />
+        <img src="72x72\1f372.png" title="1f372.png" />
+        <img src="72x72\1f373.png" title="1f373.png" /><br />
+        <img src="72x72\1f374.png" title="1f374.png" />
+        <img src="72x72\1f375.png" title="1f375.png" />
+        <img src="72x72\1f376.png" title="1f376.png" />
+        <img src="72x72\1f377.png" title="1f377.png" />
+        <img src="72x72\1f378.png" title="1f378.png" />
+        <img src="72x72\1f379.png" title="1f379.png" />
+        <img src="72x72\1f37a.png" title="1f37a.png" />
+        <img src="72x72\1f37b.png" title="1f37b.png" /><br />
+        <img src="72x72\1f37c.png" title="1f37c.png" />
+        <img src="72x72\1f380.png" title="1f380.png" />
+        <img src="72x72\1f381.png" title="1f381.png" />
+        <img src="72x72\1f382.png" title="1f382.png" />
+        <img src="72x72\1f383.png" title="1f383.png" />
+        <img src="72x72\1f384.png" title="1f384.png" />
+        <img src="72x72\1f385.png" title="1f385.png" />
+        <img src="72x72\1f386.png" title="1f386.png" /><br />
+        <img src="72x72\1f387.png" title="1f387.png" />
+        <img src="72x72\1f388.png" title="1f388.png" />
+        <img src="72x72\1f389.png" title="" />
+        <img src="72x72\1f38a.png" title="1f38a.png" />
+        <img src="72x72\1f38b.png" title="1f38b.png" />
+        <img src="72x72\1f38c.png" title="1f38c.png" />
+        <img src="72x72\1f38d.png" title="1f38d.png" />
+        <img src="72x72\1f38e.png" title="1f38e.png" /><br />
+        <img src="72x72\1f38f.png" title="1f38f.png" />
+        <img src="72x72\1f390.png" title="" />
+        <img src="72x72\1f391.png" title="1f391.png" />
+        <img src="72x72\1f392.png" title="1f392.png" />
+        <img src="72x72\1f393.png" title="1f393.png" />
+        <img src="72x72\1f3a0.png" title="1f3a0.png" />
+        <img src="72x72\1f3a1.png" title="1f3a1.png" />
+        <img src="72x72\1f3a2.png" title="1f3a2.png" /><br />
+        <img src="72x72\1f3a3.png" title="1f3a3.png" />
+        <img src="72x72\1f3a4.png" title="" />
+        <img src="72x72\1f3a5.png" title="1f3a5.png" />
+        <img src="72x72\1f3a6.png" title="1f3a6.png" />
+        <img src="72x72\1f3a7.png" title="1f3a7.png" />
+        <img src="72x72\1f3a8.png" title="1f3a8.png" />
+        <img src="72x72\1f3a9.png" title="1f3a8.png" />
+        <img src="72x72\1f3aa.png" title="1f3aa.png" /><br />
+        <img src="72x72\1f3ab.png" title="1f3ab.png" />
+        <img src="72x72\1f3ac.png" title="1f3ac.png" />
+        <img src="72x72\1f3ad.png" title="1f3ad.png" />
+        <img src="72x72\1f3ae.png" title="" />
+        <img src="72x72\1f3af.png" title="1f3af.png" />
+        <img src="72x72\1f3b0.png" title="1f3b0.png" />
+        <img src="72x72\1f3b1.png" title="1f3b1.png" />
+        <img src="72x72\1f3b2.png" title="1f3b2.png" /><br />
+        <img src="72x72\1f3b3.png" title="1f3b3.png" />
+        <img src="72x72\1f3b4.png" title="1f3b4.png" />
+        <img src="72x72\1f3b5.png" title="1f3b5.png" />
+        <img src="72x72\1f3b6.png" title="1f3b6.png" />
+        <img src="72x72\1f3b7.png" title="1f3b7.png" />
+        <img src="72x72\1f3b8.png" title="1f3b7.png" />
+        <img src="72x72\1f3b9.png" title="1f3b9.png" />
+        <img src="72x72\1f3ba.png" title="1f3ba.png" /><br />
+        <img src="72x72\1f3bb.png" title="1f3bb.png" />
+        <img src="72x72\1f3bc.png" title="1f3bc.png" />
+        <img src="72x72\1f3bd.png" title="1f3bd.png" />
+        <img src="72x72\1f3be.png" title="1f3be.png" />
+        <img src="72x72\1f3bf.png" title="1f3bf.png" />
+        <img src="72x72\1f3c0.png" title="1f3c0.png" />
+        <img src="72x72\1f3c1.png" title="1f3c1.png" />
+        <img src="72x72\1f3c2.png" title="1f3c2.png" /><br />
+        <img src="72x72\1f3c3.png" title="1f3c3.png" />
+        <img src="72x72\1f3c4.png" title="1f3c4.png" />
+        <img src="72x72\1f3c6.png" title="1f3c6.png" />
+        <img src="72x72\1f3c7.png" title="1f3c7.png" />
+        <img src="72x72\1f3c8.png" title="1f3c8.png" />
+        <img src="72x72\1f3c9.png" title="1f3c9.png" />
+        <img src="72x72\1f3ca.png" title="1f3ca.png" />
+        <img src="72x72\1f3e0.png" title="1f3e0.png" /><br />
+        <img src="72x72\1f3e1.png" title="1f3e1.png" />
+        <img src="72x72\1f3e2.png" title="1f3e2.png" />
+        <img src="72x72\1f3e3.png" title="1f3e3.png" />
+        <img src="72x72\1f3e4.png" title="1f3e4.png" />
+        <img src="72x72\1f3e5.png" title="1f3e4.png" />
+        <img src="72x72\1f3e6.png" title="1f3e6.png" />
+        <img src="72x72\1f3e7.png" title="1f3e7.png" />
+        <img src="72x72\1f3e8.png" title="1f3e8.png" /><br />
+        <img src="72x72\1f3e9.png" title="1f3e9.png" />
+        <img src="72x72\1f3ea.png" title="1f3ea.png" />
+        <img src="72x72\1f3eb.png" title="1f3eb.png" />
+        <img src="72x72\1f3ec.png" title="1f3ec.png" />
+        <img src="72x72\1f3ed.png" title="1f3ed.png" />
+        <img src="72x72\1f3ee.png" title="1f3ee.png" />
+        <img src="72x72\1f3ef.png" title="1f3ef.png" />
+        <img src="72x72\1f3f0.png" title="1f3f0.png" /><br />
+        <img src="72x72\1f400.png" title="1f400.png" />
+        <img src="72x72\1f401.png" title="1f401.png" />
+        <img src="72x72\1f402.png" title="1f402.png" />
+        <img src="72x72\1f403.png" title="1f403.png" />
+        <img src="72x72\1f404.png" title="1f404.png" />
+        <img src="72x72\1f405.png" title="1f405.png" />
+        <img src="72x72\1f406.png" title="1f406.png" />
+        <img src="72x72\1f407.png" title="1f407.png" /><br />
+        <img src="72x72\1f408.png" title="1f408.png" />
+        <img src="72x72\1f409.png" title="1f409.png" />
+        <img src="72x72\1f40a.png" title="1f40a.png" />
+        <img src="72x72\1f40b.png" title="1f40b.png" />
+        <img src="72x72\1f40c.png" title="1f40c.png" />
+        <img src="72x72\1f40d.png" title="1f40d.png" />
+        <img src="72x72\1f40e.png" title="1f40e.png" />
+        <img src="72x72\1f40f.png" title="1f40f.png" /><br />
+        <img src="72x72\1f410.png" title="1f410.png" />
+        <img src="72x72\1f411.png" title="1f410.png" />
+        <img src="72x72\1f412.png" title="1f412.png" />
+        <img src="72x72\1f413.png" title="1f412.png" />
+        <img src="72x72\1f414.png" title="" />
+        <img src="72x72\1f415.png" title="1f414.png" />
+        <img src="72x72\1f416.png" title="1f416.png" />
+        <img src="72x72\1f417.png" title="1f417.png" /><br />
+        <img src="72x72\1f418.png" title="1f418.png" />
+        <img src="72x72\1f419.png" title="1f419.png" />
+        <img src="72x72\1f41a.png" title="1f41a.png" />
+        <img src="72x72\1f41b.png" title="1f41b.png" />
+        <img src="72x72\1f41c.png" title="1f41c.png" />
+        <img src="72x72\1f41d.png" title="1f41d.png" />
+        <img src="72x72\1f41e.png" title="1f41e.png" />
+        <img src="72x72\1f41f.png" title="1f41f.png" /><br />
+        <img src="72x72\1f420.png" title="1f420.png" />
+        <img src="72x72\1f421.png" title="1f421.png" />
+        <img src="72x72\1f422.png" title="1f422.png" />
+        <img src="72x72\1f423.png" title="1f423.png" />
+        <img src="72x72\1f424.png" title="1f424.png" />
+        <img src="72x72\1f425.png" title="1f425.png" />
+        <img src="72x72\1f426.png" title="1f426.png" />
+        <img src="72x72\1f427.png" title="1f427.png" /><br />
+        <img src="72x72\1f428.png" title="1f428.png" />
+        <img src="72x72\1f429.png" title="1f429.png" />
+        <img src="72x72\1f42a.png" title="1f42a.png" />
+        <img src="72x72\1f42b.png" title="1f42b.png" />
+        <img src="72x72\1f42c.png" title="1f42c.png" />
+        <img src="72x72\1f42d.png" title="1f42d.png" />
+        <img src="72x72\1f42e.png" title="1f42e.png" />
+        <img src="72x72\1f42f.png" title="1f42f.png" /><br />
+        <img src="72x72\1f430.png" title="1f430.png" />
+        <img src="72x72\1f431.png" title="1f431.png" />
+        <img src="72x72\1f432.png" title="1f432.png" />
+        <img src="72x72\1f433.png" title="1f433.png" />
+        <img src="72x72\1f434.png" title="1f434.png" />
+        <img src="72x72\1f435.png" title="1f435.png" />
+        <img src="72x72\1f436.png" title="1f436.png" />
+        <img src="72x72\1f437.png" title="1f437.png" /><br />
+        <img src="72x72\1f438.png" title="1f437.png" />
+        <img src="72x72\1f439.png" title="1f439.png" />
+        <img src="72x72\1f43a.png" title="1f43a.png" />
+        <img src="72x72\1f43b.png" title="1f43b.png" />
+        <img src="72x72\1f43c.png" title="1f43c.png" />
+        <img src="72x72\1f43d.png" title="1f43d.png" />
+        <img src="72x72\1f43e.png" title="1f43e.png" />
+        <img src="72x72\1f440.png" title="1f440.png" /><br />
+        <img src="72x72\1f442.png" title="1f442.png" />
+        <img src="72x72\1f443.png" title="1f443.png" />
+        <img src="72x72\1f444.png" title="1f444.png" />
+        <img src="72x72\1f445.png" title="1f445.png" />
+        <img src="72x72\1f446.png" title="1f446.png" />
+        <img src="72x72\1f447.png" title="1f447.png" />
+        <img src="72x72\1f448.png" title="1f448.png" />
+        <img src="72x72\1f449.png" title="1f449.png" /><br />
+        <img src="72x72\1f44a.png" title="1f44a.png" />
+        <img src="72x72\1f44b.png" title="1f44a.png" />
+        <img src="72x72\1f44c.png" title="1f44c.png" />
+        <img src="72x72\1f44d.png" title="1f44d.png" />
+        <img src="72x72\1f44e.png" title="1f44e.png" />
+        <img src="72x72\1f44f.png" title="1f44f.png" />
+        <img src="72x72\1f450.png" title="1f450.png" />
+        <img src="72x72\1f451.png" title="1f451.png" /><br />
+        <img src="72x72\1f452.png" title="1f452.png" />
+        <img src="72x72\1f453.png" title="1f453.png" />
+        <img src="72x72\1f454.png" title="1f454.png" />
+        <img src="72x72\1f455.png" title="1f455.png" />
+        <img src="72x72\1f456.png" title="1f456.png" />
+        <img src="72x72\1f457.png" title="1f457.png" />
+        <img src="72x72\1f458.png" title="1f458.png" />
+        <img src="72x72\1f459.png" title="1f459.png" /><br />
+        <img src="72x72\1f45a.png" title="1f45a.png" />
+        <img src="72x72\1f45b.png" title="" />
+        <img src="72x72\1f45c.png" title="1f45c.png" />
+        <img src="72x72\1f45d.png" title="1f45d.png" />
+        <img src="72x72\1f45e.png" title="1f45e.png" />
+        <img src="72x72\1f45f.png" title="1f45f.png" />
+        <img src="72x72\1f460.png" title="1f460.png" />
+        <img src="72x72\1f461.png" title="1f461.png" /><br />
+        <img src="72x72\1f462.png" title="1f462.png" />
+        <img src="72x72\1f463.png" title="1f463.png" />
+        <img src="72x72\1f464.png" title="1f464.png" />
+        <img src="72x72\1f465.png" title="1f465.png" />
+        <img src="72x72\1f466.png" title="1f466.png" />
+        <img src="72x72\1f467.png" title="1f467.png" />
+        <img src="72x72\1f468.png" title="1f467.png" />
+        <img src="72x72\1f469.png" title="1f469.png" /><br />
+        <img src="72x72\1f46a.png" title="1f46a.png" />
+        <img src="72x72\1f46b.png" title="1f46b.png" />
+        <img src="72x72\1f46c.png" title="1f46c.png" />
+        <img src="72x72\1f46d.png" title="1f46d.png" />
+        <img src="72x72\1f46e.png" title="1f46e.png" />
+        <img src="72x72\1f46f.png" title="1f46f.png" />
+        <img src="72x72\1f470.png" title="1f470.png" />
+        <img src="72x72\1f471.png" title="1f470.png" /><br />
+        <img src="72x72\1f472.png" title="1f472.png" />
+        <img src="72x72\1f473.png" title="1f473.png" />
+        <img src="72x72\1f474.png" title="1f474.png" />
+        <img src="72x72\1f475.png" title="1f475.png" />
+        <img src="72x72\1f476.png" title="1f476.png" />
+        <img src="72x72\1f477.png" title="1f477.png" />
+        <img src="72x72\1f478.png" title="1f478.png" />
+        <img src="72x72\1f479.png" title="1f479.png" /><br />
+        <img src="72x72\1f47a.png" title="1f47a.png" />
+        <img src="72x72\1f47b.png" title="1f47b.png" />
+        <img src="72x72\1f47c.png" title="1f47c.png" />
+        <img src="72x72\1f47d.png" title="1f47d.png" />
+        <img src="72x72\1f47e.png" title="1f47e.png" />
+        <img src="72x72\1f47f.png" title="1f47f.png" />
+        <img src="72x72\1f480.png" title="1f480.png" />
+        <img src="72x72\1f481.png" title="1f481.png" /><br />
+        <img src="72x72\1f482.png" title="" />
+        <img src="72x72\1f483.png" title="1f482.png" />
+        <img src="72x72\1f484.png" title="1f484.png" />
+        <img src="72x72\1f485.png" title="1f485.png" />
+        <img src="72x72\1f486.png" title="" />
+        <img src="72x72\1f487.png" title="1f487.png" />
+        <img src="72x72\1f488.png" title="1f488.png" />
+        <img src="72x72\1f489.png" title="1f489.png" /><br />
+        <img src="72x72\1f48a.png" title="1f48a.png" />
+        <img src="72x72\1f48b.png" title="1f48b.png" />
+        <img src="72x72\1f48c.png" title="1f48c.png" />
+        <img src="72x72\1f48d.png" title="1f48d.png" />
+        <img src="72x72\1f48e.png" title="1f48e.png" />
+        <img src="72x72\1f48f.png" title="1f48f.png" />
+        <img src="72x72\1f490.png" title="1f490.png" />
+        <img src="72x72\1f491.png" title="1f491.png" /><br />
+        <img src="72x72\1f492.png" title="1f492.png" />
+        <img src="72x72\1f493.png" title="1f493.png" />
+        <img src="72x72\1f494.png" title="1f494.png" />
+        <img src="72x72\1f495.png" title="1f495.png" />
+        <img src="72x72\1f496.png" title="1f496.png" />
+        <img src="72x72\1f497.png" title="1f497.png" />
+        <img src="72x72\1f498.png" title="1f498.png" />
+        <img src="72x72\1f499.png" title="1f499.png" /><br />
+        <img src="72x72\1f49a.png" title="1f49a.png" />
+        <img src="72x72\1f49b.png" title="1f49b.png" />
+        <img src="72x72\1f49c.png" title="1f49c.png" />
+        <img src="72x72\1f49d.png" title="1f49d.png" />
+        <img src="72x72\1f49e.png" title="1f49e.png" />
+        <img src="72x72\1f49f.png" title="1f49f.png" />
+        <img src="72x72\1f4a0.png" title="1f4a0.png" />
+        <img src="72x72\1f4a1.png" title="1f4a1.png" /><br />
+        <img src="72x72\1f4a2.png" title="1f4a2.png" />
+        <img src="72x72\1f4a3.png" title="1f4a3.png" />
+        <img src="72x72\1f4a4.png" title="1f4a4.png" />
+        <img src="72x72\1f4a5.png" title="1f4a5.png" />
+        <img src="72x72\1f4a6.png" title="1f4a6.png" />
+        <img src="72x72\1f4a7.png" title="1f4a7.png" />
+        <img src="72x72\1f4a8.png" title="1f4a8.png" />
+        <img src="72x72\1f4a9.png" title="1f4a9.png" /><br />
+        <img src="72x72\1f4aa.png" title="1f4aa.png" />
+        <img src="72x72\1f4ab.png" title="1f4ab.png" />
+        <img src="72x72\1f4ac.png" title="1f4ab.png" />
+        <img src="72x72\1f4ad.png" title="1f4ad.png" />
+        <img src="72x72\1f4ae.png" title="1f4ae.png" />
+        <img src="72x72\1f4af.png" title="1f4af.png" />
+        <img src="72x72\1f4b0.png" title="" />
+        <img src="72x72\1f4b1.png" title="1f4b1.png" /><br />
+        <img src="72x72\1f4b2.png" title="1f4b2.png" />
+        <img src="72x72\1f4b3.png" title="1f4b3.png" />
+        <img src="72x72\1f4b4.png" title="1f4b4.png" />
+        <img src="72x72\1f4b5.png" title="1f4b5.png" />
+        <img src="72x72\1f4b6.png" title="1f4b6.png" />
+        <img src="72x72\1f4b7.png" title="1f4b7.png" />
+        <img src="72x72\1f4b8.png" title="1f4b8.png" />
+        <img src="72x72\1f4b9.png" title="1f4b9.png" /><br />
+        <img src="72x72\1f4ba.png" title="1f4ba.png" />
+        <img src="72x72\1f4bb.png" title="1f4bb.png" />
+        <img src="72x72\1f4bc.png" title="1f4bc.png" />
+        <img src="72x72\1f4bd.png" title="1f4bd.png" />
+        <img src="72x72\1f4be.png" title="1f4be.png" />
+        <img src="72x72\1f4bf.png" title="1f4bf.png" />
+        <img src="72x72\1f4c0.png" title="1f4c0.png" />
+        <img src="72x72\1f4c1.png" title="1f4c1.png" /><br />
+        <img src="72x72\1f4c2.png" title="1f4c2.png" />
+        <img src="72x72\1f4c3.png" title="1f4c3.png" />
+        <img src="72x72\1f4c4.png" title="1f4c4.png" />
+        <img src="72x72\1f4c5.png" title="1f4c5.png" />
+        <img src="72x72\1f4c6.png" title="1f4c6.png" />
+        <img src="72x72\1f4c7.png" title="1f4c7.png" />
+        <img src="72x72\1f4c8.png" title="1f4c8.png" />
+        <img src="72x72\1f4c9.png" title="1f4c9.png" /><br />
+        <img src="72x72\1f4ca.png" title="1f4ca.png" />
+        <img src="72x72\1f4cb.png" title="1f4cb.png" />
+        <img src="72x72\1f4cc.png" title="1f4cc.png" />
+        <img src="72x72\1f4cd.png" title="1f4cd.png" />
+        <img src="72x72\1f4ce.png" title="1f4ce.png" />
+        <img src="72x72\1f4cf.png" title="1f4cf.png" />
+        <img src="72x72\1f4d0.png" title="1f4d0.png" />
+        <img src="72x72\1f4d1.png" title="1f4d0.png" /><br />
+        <img src="72x72\1f4d2.png" title="1f4d2.png" />
+        <img src="72x72\1f4d3.png" title="1f4d3.png" />
+        <img src="72x72\1f4d4.png" title="1f4d4.png" />
+        <img src="72x72\1f4d5.png" title="1f4d5.png" />
+        <img src="72x72\1f4d6.png" title="1f4d6.png" />
+        <img src="72x72\1f4d7.png" title="" />
+        <img src="72x72\1f4d8.png" title="1f4d8.png" />
+        <img src="72x72\1f4d9.png" title="1f4d9.png" /><br />
+        <img src="72x72\1f4da.png" title="1f4da.png" />
+        <img src="72x72\1f4db.png" title="1f4db.png" />
+        <img src="72x72\1f4dc.png" title="1f4dc.png" />
+        <img src="72x72\1f4dd.png" title="1f4dd.png" />
+        <img src="72x72\1f4de.png" title="1f4de.png" />
+        <img src="72x72\1f4df.png" title="1f4df.png" />
+        <img src="72x72\1f4e0.png" title="1f4e0.png" />
+        <img src="72x72\1f4e1.png" title="1f4e1.png" /><br />
+        <img src="72x72\1f4e2.png" title="1f4e2.png" />
+        <img src="72x72\1f4e3.png" title="1f4e3.png" />
+        <img src="72x72\1f4e4.png" title="1f4e4.png" />
+        <img src="72x72\1f4e5.png" title="1f4e5.png" />
+        <img src="72x72\1f4e6.png" title="" />
+        <img src="72x72\1f4e7.png" title="1f4e6.png" />
+        <img src="72x72\1f4e8.png" title="1f4e8.png" />
+        <img src="72x72\1f4e9.png" title="1f4e9.png" /><br />
+        <img src="72x72\1f4ea.png" title="1f4ea.png" />
+        <img src="72x72\1f4eb.png" title="1f4eb.png" />
+        <img src="72x72\1f4ec.png" title="1f4ec.png" />
+        <img src="72x72\1f4ed.png" title="1f4ed.png" />
+        <img src="72x72\1f4ee.png" title="1f4ee.png" />
+        <img src="72x72\1f4ef.png" title="1f4ef.png" />
+        <img src="72x72\1f4f0.png" title="1f4f0.png" />
+        <img src="72x72\1f4f1.png" title="1f4f1.png" /><br />
+        <img src="72x72\1f4f2.png" title="1f4f2.png" />
+        <img src="72x72\1f4f3.png" title="1f4f3.png" />
+        <img src="72x72\1f4f4.png" title="1f4f4.png" />
+        <img src="72x72\1f4f5.png" title="1f4f5.png" />
+        <img src="72x72\1f4f6.png" title="1f4f6.png" />
+        <img src="72x72\1f4f7.png" title="1f4f7.png" />
+        <img src="72x72\1f4f9.png" title="1f4f9.png" />
+        <img src="72x72\1f4fa.png" title="1f4fa.png" /><br />
+        <img src="72x72\1f4fb.png" title="1f4fb.png" />
+        <img src="72x72\1f4fc.png" title="1f4fc.png" />
+        <img src="72x72\1f500.png" title="1f500.png" />
+        <img src="72x72\1f501.png" title="1f501.png" />
+        <img src="72x72\1f502.png" title="1f502.png" />
+        <img src="72x72\1f503.png" title="1f503.png" />
+        <img src="72x72\1f504.png" title="1f503.png" />
+        <img src="72x72\1f505.png" title="1f505.png" /><br />
+        <img src="72x72\1f506.png" title="1f506.png" />
+        <img src="72x72\1f507.png" title="1f507.png" />
+        <img src="72x72\1f508.png" title="1f508.png" />
+        <img src="72x72\1f509.png" title="1f509.png" />
+        <img src="72x72\1f50a.png" title="1f50a.png" />
+        <img src="72x72\1f50b.png" title="1f50b.png" />
+        <img src="72x72\1f50c.png" title="1f50c.png" />
+        <img src="72x72\1f50d.png" title="1f50d.png" /><br />
+        <img src="72x72\1f50e.png" title="1f50e.png" />
+        <img src="72x72\1f50f.png" title="1f50f.png" />
+        <img src="72x72\1f510.png" title="1f510.png" />
+        <img src="72x72\1f511.png" title="1f511.png" />
+        <img src="72x72\1f512.png" title="1f512.png" />
+        <img src="72x72\1f513.png" title="1f513.png" />
+        <img src="72x72\1f514.png" title="1f514.png" />
+        <img src="72x72\1f515.png" title="1f515.png" /><br />
+        <img src="72x72\1f516.png" title="1f516.png" />
+        <img src="72x72\1f517.png" title="1f517.png" />
+        <img src="72x72\1f518.png" title="1f518.png" />
+        <img src="72x72\1f519.png" title="1f519.png" />
+        <img src="72x72\1f51a.png" title="1f51a.png" />
+        <img src="72x72\1f51b.png" title="1f51b.png" />
+        <img src="72x72\1f51c.png" title="1f51b.png" />
+        <img src="72x72\1f51d.png" title="1f51d.png" /><br />
+        <img src="72x72\1f51e.png" title="1f51e.png" />
+        <img src="72x72\1f51f.png" title="1f51f.png" />
+        <img src="72x72\1f520.png" title="1f520.png" />
+        <img src="72x72\1f521.png" title="1f521.png" />
+        <img src="72x72\1f522.png" title="1f522.png" />
+        <img src="72x72\1f523.png" title="1f523.png" />
+        <img src="72x72\1f524.png" title="1f524.png" />
+        <img src="72x72\1f525.png" title="1f525.png" /><br />
+        <img src="72x72\1f526.png" title="1f526.png" />
+        <img src="72x72\1f527.png" title="1f527.png" />
+        <img src="72x72\1f528.png" title="1f528.png" />
+        <img src="72x72\1f529.png" title="1f529.png" />
+        <img src="72x72\1f52a.png" title="1f52a.png" />
+        <img src="72x72\1f52b.png" title="1f52b.png" />
+        <img src="72x72\1f52c.png" title="1f52c.png" />
+        <img src="72x72\1f52d.png" title="1f52d.png" /><br />
+        <img src="72x72\1f52e.png" title="1f52e.png" />
+        <img src="72x72\1f52f.png" title="1f52f.png" />
+        <img src="72x72\1f530.png" title="1f530.png" />
+        <img src="72x72\1f531.png" title="1f531.png" />
+        <img src="72x72\1f532.png" title="1f531.png" />
+        <img src="72x72\1f533.png" title="1f533.png" />
+        <img src="72x72\1f534.png" title="1f534.png" />
+        <img src="72x72\1f535.png" title="1f535.png" /><br />
+        <img src="72x72\1f536.png" title="1f536.png" />
+        <img src="72x72\1f537.png" title="1f537.png" />
+        <img src="72x72\1f538.png" title="1f538.png" />
+        <img src="72x72\1f539.png" title="1f539.png" />
+        <img src="72x72\1f53a.png" title="1f53a.png" />
+        <img src="72x72\1f53b.png" title="1f53b.png" />
+        <img src="72x72\1f53c.png" title="1f53c.png" />
+        <img src="72x72\1f53d.png" title="1f53d.png" /><br />
+        <img src="72x72\1f550.png" title="1f550.png" />
+        <img src="72x72\1f551.png" title="1f551.png" />
+        <img src="72x72\1f552.png" title="1f552.png" />
+        <img src="72x72\1f553.png" title="1f553.png" />
+        <img src="72x72\1f554.png" title="1f554.png" />
+        <img src="72x72\1f555.png" title="1f555.png" />
+        <img src="72x72\1f556.png" title="1f556.png" />
+        <img src="72x72\1f557.png" title="1f557.png" /><br />
+        <img src="72x72\1f558.png" title="1f558.png" />
+        <img src="72x72\1f559.png" title="1f559.png" />
+        <img src="72x72\1f55a.png" title="1f55a.png" />
+        <img src="72x72\1f55b.png" title="1f55b.png" />
+        <img src="72x72\1f55c.png" title="1f55c.png" />
+        <img src="72x72\1f55d.png" title="1f55d.png" />
+        <img src="72x72\1f55e.png" title="1f55e.png" />
+        <img src="72x72\1f55f.png" title="1f55f.png" /><br />
+        <img src="72x72\1f560.png" title="1f560.png" />
+        <img src="72x72\1f561.png" title="1f561.png" />
+        <img src="72x72\1f562.png" title="1f562.png" />
+        <img src="72x72\1f563.png" title="1f563.png" />
+        <img src="72x72\1f564.png" title="1f564.png" />
+        <img src="72x72\1f565.png" title="1f565.png" />
+        <img src="72x72\1f566.png" title="1f566.png" />
+        <img src="72x72\1f567.png" title="1f567.png" /><br />
+        <img src="72x72\1f5fb.png" title="1f5fb.png" />
+        <img src="72x72\1f5fc.png" title="1f5fc.png" />
+        <img src="72x72\1f5fd.png" title="1f5fd.png" />
+        <img src="72x72\1f5fe.png" title="" />
+        <img src="72x72\1f5ff.png" title="1f5fe.png" />
+        <img src="72x72\1f600.png" title="1f600.png" />
+        <img src="72x72\1f601.png" title="1f601.png" />
+        <img src="72x72\1f602.png" title="1f602.png" /><br />
+        <img src="72x72\1f603.png" title="1f603.png" />
+        <img src="72x72\1f604.png" title="1f604.png" />
+        <img src="72x72\1f605.png" title="1f605.png" />
+        <img src="72x72\1f606.png" title="1f606.png" />
+        <img src="72x72\1f607.png" title="1f607.png" />
+        <img src="72x72\1f608.png" title="1f608.png" />
+        <img src="72x72\1f609.png" title="1f609.png" />
+        <img src="72x72\1f60a.png" title="1f60a.png" /><br />
+        <img src="72x72\1f60b.png" title="1f60b.png" />
+        <img src="72x72\1f60c.png" title="1f60c.png" />
+        <img src="72x72\1f60d.png" title="1f60d.png" />
+        <img src="72x72\1f60e.png" title="1f60e.png" />
+        <img src="72x72\1f60f.png" title="1f60f.png" />
+        <img src="72x72\1f610.png" title="1f610.png" />
+        <img src="72x72\1f611.png" title="1f611.png" />
+        <img src="72x72\1f612.png" title="1f612.png" /><br />
+        <img src="72x72\1f613.png" title="1f613.png" />
+        <img src="72x72\1f614.png" title="1f614.png" />
+        <img src="72x72\1f615.png" title="1f615.png" />
+        <img src="72x72\1f616.png" title="1f616.png" />
+        <img src="72x72\1f617.png" title="1f617.png" />
+        <img src="72x72\1f618.png" title="1f618.png" />
+        <img src="72x72\1f619.png" title="1f619.png" />
+        <img src="72x72\1f61a.png" title="" /><br />
+        <img src="72x72\1f61b.png" title="1f61a.png" />
+        <img src="72x72\1f61c.png" title="1f61c.png" />
+        <img src="72x72\1f61d.png" title="1f61d.png" />
+        <img src="72x72\1f61e.png" title="1f61e.png" />
+        <img src="72x72\1f61f.png" title="1f61f.png" />
+        <img src="72x72\1f620.png" title="1f620.png" />
+        <img src="72x72\1f621.png" title="1f621.png" />
+        <img src="72x72\1f622.png" title="1f622.png" /><br />
+        <img src="72x72\1f623.png" title="1f623.png" />
+        <img src="72x72\1f624.png" title="1f624.png" />
+        <img src="72x72\1f625.png" title="1f625.png" />
+        <img src="72x72\1f626.png" title="1f625.png" />
+        <img src="72x72\1f627.png" title="1f627.png" />
+        <img src="72x72\1f628.png" title="1f628.png" />
+        <img src="72x72\1f629.png" title="1f629.png" />
+        <img src="72x72\1f62a.png" title="1f62a.png" /><br />
+        <img src="72x72\1f62b.png" title="1f62b.png" />
+        <img src="72x72\1f62c.png" title="1f62c.png" />
+        <img src="72x72\1f62d.png" title="1f62c.png" />
+        <img src="72x72\1f62e.png" title="1f62e.png" />
+        <img src="72x72\1f62f.png" title="1f62f.png" />
+        <img src="72x72\1f630.png" title="1f630.png" />
+        <img src="72x72\1f631.png" title="1f631.png" />
+        <img src="72x72\1f632.png" title="1f632.png" /><br />
+        <img src="72x72\1f633.png" title="1f633.png" />
+        <img src="72x72\1f634.png" title="1f634.png" />
+        <img src="72x72\1f635.png" title="1f635.png" />
+        <img src="72x72\1f636.png" title="1f636.png" />
+        <img src="72x72\1f637.png" title="1f637.png" />
+        <img src="72x72\1f638.png" title="1f638.png" />
+        <img src="72x72\1f639.png" title="1f639.png" />
+        <img src="72x72\1f63a.png" title="1f63a.png" /><br />
+        <img src="72x72\1f63b.png" title="" />
+        <img src="72x72\1f63c.png" title="1f63b.png" />
+        <img src="72x72\1f63d.png" title="1f63d.png" />
+        <img src="72x72\1f63e.png" title="1f63e.png" />
+        <img src="72x72\1f63f.png" title="1f63f.png" />
+        <img src="72x72\1f640.png" title="1f640.png" />
+        <img src="72x72\1f645.png" title="1f645.png" />
+        <img src="72x72\1f646.png" title="1f646.png" /><br />
+        <img src="72x72\1f647.png" title="1f647.png" />
+        <img src="72x72\1f648.png" title="1f648.png" />
+        <img src="72x72\1f649.png" title="1f649.png" />
+        <img src="72x72\1f64a.png" title="1f64a.png" />
+        <img src="72x72\1f64b.png" title="1f64b.png" />
+        <img src="72x72\1f64c.png" title="1f64c.png" />
+        <img src="72x72\1f64d.png" title="1f64d.png" />
+        <img src="72x72\1f64e.png" title="1f64e.png" /><br />
+        <img src="72x72\1f64f.png" title="1f64f.png" />
+        <img src="72x72\1f680.png" title="1f680.png" />
+        <img src="72x72\1f681.png" title="1f681.png" />
+        <img src="72x72\1f682.png" title="1f682.png" />
+        <img src="72x72\1f683.png" title="1f683.png" />
+        <img src="72x72\1f684.png" title="1f684.png" />
+        <img src="72x72\1f685.png" title="1f685.png" />
+        <img src="72x72\1f686.png" title="1f686.png" /><br />
+        <img src="72x72\1f687.png" title="1f687.png" />
+        <img src="72x72\1f688.png" title="1f688.png" />
+        <img src="72x72\1f689.png" title="1f689.png" />
+        <img src="72x72\1f68a.png" title="1f68a.png" />
+        <img src="72x72\1f68b.png" title="1f68b.png" />
+        <img src="72x72\1f68c.png" title="1f68c.png" />
+        <img src="72x72\1f68d.png" title="1f68d.png" />
+        <img src="72x72\1f68e.png" title="1f68e.png" /><br />
+        <img src="72x72\1f68f.png" title="1f68f.png" />
+        <img src="72x72\1f690.png" title="1f690.png" />
+        <img src="72x72\1f691.png" title="1f691.png" />
+        <img src="72x72\1f692.png" title="1f692.png" />
+        <img src="72x72\1f693.png" title="1f693.png" />
+        <img src="72x72\1f694.png" title="1f694.png" />
+        <img src="72x72\1f695.png" title="1f695.png" />
+        <img src="72x72\1f696.png" title="1f696.png" /><br />
+        <img src="72x72\1f697.png" title="1f697.png" />
+        <img src="72x72\1f698.png" title="1f698.png" />
+        <img src="72x72\1f699.png" title="1f699.png" />
+        <img src="72x72\1f69a.png" title="1f69a.png" />
+        <img src="72x72\1f69b.png" title="1f69b.png" />
+        <img src="72x72\1f69c.png" title="1f69c.png" />
+        <img src="72x72\1f69d.png" title="1f69d.png" />
+        <img src="72x72\1f69e.png" title="1f69e.png" /><br />
+        <img src="72x72\1f69f.png" title="1f69f.png" />
+        <img src="72x72\1f6a0.png" title="1f6a0.png" />
+        <img src="72x72\1f6a1.png" title="1f6a1.png" />
+        <img src="72x72\1f6a2.png" title="1f6a2.png" />
+        <img src="72x72\1f6a3.png" title="1f6a3.png" />
+        <img src="72x72\1f6a4.png" title="1f6a4.png" />
+        <img src="72x72\1f6a5.png" title="1f6a5.png" />
+        <img src="72x72\1f6a6.png" title="1f6a6.png" /><br />
+        <img src="72x72\1f6a7.png" title="1f6a7.png" />
+        <img src="72x72\1f6a8.png" title="1f6a8.png" />
+        <img src="72x72\1f6a9.png" title="1f6a9.png" />
+        <img src="72x72\1f6aa.png" title="1f6aa.png" />
+        <img src="72x72\1f6ab.png" title="1f6ab.png" />
+        <img src="72x72\1f6ac.png" title="1f6ac.png" />
+        <img src="72x72\1f6ad.png" title="1f6ad.png" />
+        <img src="72x72\1f6ae.png" title="1f6ae.png" /><br />
+        <img src="72x72\1f6af.png" title="1f6af.png" />
+        <img src="72x72\1f6b0.png" title="1f6b0.png" />
+        <img src="72x72\1f6b1.png" title="1f6b1.png" />
+        <img src="72x72\1f6b2.png" title="1f6b2.png" />
+        <img src="72x72\1f6b3.png" title="1f6b3.png" />
+        <img src="72x72\1f6b4.png" title="1f6b4.png" />
+        <img src="72x72\1f6b5.png" title="1f6b5.png" />
+        <img src="72x72\1f6b6.png" title="1f6b6.png" /><br />
+        <img src="72x72\1f6b7.png" title="1f6b7.png" />
+        <img src="72x72\1f6b8.png" title="1f6b8.png" />
+        <img src="72x72\1f6b9.png" title="1f6b9.png" />
+        <img src="72x72\1f6ba.png" title="1f6ba.png" />
+        <img src="72x72\1f6bb.png" title="1f6bb.png" />
+        <img src="72x72\1f6bc.png" title="1f6bc.png" />
+        <img src="72x72\1f6bd.png" title="1f6bd.png" />
+        <img src="72x72\1f6be.png" title="1f6be.png" /><br />
+        <img src="72x72\1f6bf.png" title="1f6bf.png" />
+        <img src="72x72\1f6c0.png" title="1f6c0.png" />
+        <img src="72x72\1f6c1.png" title="1f6c1.png" />
+        <img src="72x72\1f6c2.png" title="1f6c2.png" />
+        <img src="72x72\1f6c3.png" title="1f6c3.png" />
+        <img src="72x72\1f6c4.png" title="1f6c4.png" />
+        <img src="72x72\1f6c5.png" title="1f6c5.png" />
+        <img src="72x72\203c.png" title="203c.png" /><br />
+        <img src="72x72\2049.png" title="2049.png" />
+        <img src="72x72\2122.png" title="2122.png" />
+        <img src="72x72\2139.png" title="2139.png" />
+        <img src="72x72\2194.png" title="2194.png" />
+        <img src="72x72\2195.png" title="2194.png" />
+        <img src="72x72\2196.png" title="2196.png" />
+        <img src="72x72\2197.png" title="2197.png" />
+        <img src="72x72\2198.png" title="2198.png" /><br />
+        <img src="72x72\2199.png" title="2199.png" />
+        <img src="72x72\21a9.png" title="21a9.png" />
+        <img src="72x72\21aa.png" title="21aa.png" />
+        <img src="72x72\23-20e3.png" title="23-20e3.png" />
+        <img src="72x72\231a.png" title="231a.png" />
+        <img src="72x72\231b.png" title="231b.png" />
+        <img src="72x72\23e9.png" title="23e9.png" />
+        <img src="72x72\23ea.png" title="23ea.png" /><br />
+        <img src="72x72\23eb.png" title="23eb.png" />
+        <img src="72x72\23ec.png" title="23ec.png" />
+        <img src="72x72\23f0.png" title="23f0.png" />
+        <img src="72x72\23f3.png" title="23f3.png" />
+        <img src="72x72\24c2.png" title="24c2.png" />
+        <img src="72x72\25aa.png" title="25aa.png" />
+        <img src="72x72\25ab.png" title="25ab.png" />
+        <img src="72x72\25b6.png" title="25b6.png" /><br />
+        <img src="72x72\25c0.png" title="25b6.png" />
+        <img src="72x72\25fb.png" title="" />
+        <img src="72x72\25fc.png" title="25fb.png" />
+        <img src="72x72\25fd.png" title="25fd.png" />
+        <img src="72x72\25fe.png" title="25fe.png" />
+        <img src="72x72\2600.png" title="" />
+        <img src="72x72\2601.png" title="2601.png" />
+        <img src="72x72\260e.png" title="260e.png" /><br />
+        <img src="72x72\2611.png" title="2611.png" />
+        <img src="72x72\2614.png" title="2614.png" />
+        <img src="72x72\2615.png" title="2615.png" />
+        <img src="72x72\261d.png" title="261d.png" />
+        <img src="72x72\263a.png" title="263a.png" />
+        <img src="72x72\2648.png" title="2648.png" />
+        <img src="72x72\2649.png" title="2649.png" />
+        <img src="72x72\264a.png" title="264a.png" /><br />
+        <img src="72x72\264b.png" title="264a.png" />
+        <img src="72x72\264c.png" title="264c.png" />
+        <img src="72x72\264d.png" title="264c.png" />
+        <img src="72x72\264e.png" title="264e.png" />
+        <img src="72x72\264f.png" title="264f.png" />
+        <img src="72x72\2650.png" title="2650.png" />
+        <img src="72x72\2651.png" title="2651.png" />
+        <img src="72x72\2652.png" title="2651.png" /><br />
+        <img src="72x72\2653.png" title="2653.png" />
+        <img src="72x72\2660.png" title="2660.png" />
+        <img src="72x72\2663.png" title="2663.png" />
+        <img src="72x72\2665.png" title="2665.png" />
+        <img src="72x72\2666.png" title="2666.png" />
+        <img src="72x72\2668.png" title="2668.png" />
+        <img src="72x72\267b.png" title="2668.png" />
+        <img src="72x72\267f.png" title="267f.png" /><br />
+        <img src="72x72\2693.png" title="2693.png" />
+        <img src="72x72\26a0.png" title="26a0.png" />
+        <img src="72x72\26a1.png" title="26a1.png" />
+        <img src="72x72\26aa.png" title="26aa.png" />
+        <img src="72x72\26ab.png" title="26ab.png" />
+        <img src="72x72\26bd.png" title="26bd.png" />
+        <img src="72x72\26be.png" title="26be.png" />
+        <img src="72x72\26c4.png" title="26c4.png" /><br />
+        <img src="72x72\26c5.png" title="26c5.png" />
+        <img src="72x72\26ce.png" title="26ce.png" />
+        <img src="72x72\26d4.png" title="26d4.png" />
+        <img src="72x72\26ea.png" title="26ea.png" />
+        <img src="72x72\26f2.png" title="26f2.png" />
+        <img src="72x72\26f3.png" title="26f3.png" />
+        <img src="72x72\26f5.png" title="26f5.png" />
+        <img src="72x72\26fa.png" title="26fa.png" /><br />
+        <img src="72x72\26fd.png" title="26fd.png" />
+        <img src="72x72\2702.png" title="2702.png" />
+        <img src="72x72\2705.png" title="2705.png" />
+        <img src="72x72\2708.png" title="2708.png" />
+        <img src="72x72\2709.png" title="2709.png" />
+        <img src="72x72\270a.png" title="270a.png" />
+        <img src="72x72\270b.png" title="270b.png" />
+        <img src="72x72\270c.png" title="270c.png" /><br />
+        <img src="72x72\270f.png" title="270f.png" />
+        <img src="72x72\2712.png" title="2712.png" />
+        <img src="72x72\2714.png" title="2714.png" />
+        <img src="72x72\2716.png" title="2716.png" />
+        <img src="72x72\2728.png" title="2728.png" />
+        <img src="72x72\2733.png" title="2733.png" />
+        <img src="72x72\2734.png" title="2734.png" />
+        <img src="72x72\2744.png" title="2744.png" /><br />
+        <img src="72x72\2747.png" title="" />
+        <img src="72x72\274c.png" title="2747.png" />
+        <img src="72x72\274e.png" title="274e.png" />
+        <img src="72x72\2753.png" title="2753.png" />
+        <img src="72x72\2754.png" title="2754.png" />
+        <img src="72x72\2755.png" title="2755.png" />
+        <img src="72x72\2757.png" title="2757.png" />
+        <img src="72x72\2764.png" title="2764.png" /><br />
+        <img src="72x72\2795.png" title="2795.png" />
+        <img src="72x72\2796.png" title="2796.png" />
+        <img src="72x72\2797.png" title="2797.png" />
+        <img src="72x72\27a1.png" title="27a1.png" />
+        <img src="72x72\27b0.png" title="27b0.png" />
+        <img src="72x72\27bf.png" title="27bf.png" />
+        <img src="72x72\2934.png" title="2934.png" />
+        <img src="72x72\2935.png" title="2935.png" /><br />
+        <img src="72x72\2b05.png" title="2b05.png" />
+        <img src="72x72\2b06.png" title="2b06.png" />
+        <img src="72x72\2b07.png" title="2b07.png" />
+        <img src="72x72\2b1b.png" title="2b1b.png" />
+        <img src="72x72\2b1c.png" title="2b1c.png" />
+        <img src="72x72\2b50.png" title="2b50.png" />
+        <img src="72x72\2b55.png" title="2b55.png" />
+        <img src="72x72\30-20e3.png" title="30-20e3.png" /><br />
+        <img src="72x72\3030.png" title="3030.png" />
+        <img src="72x72\303d.png" title="303d.png" />
+        <img src="72x72\31-20e3.png" title="31-20e3.png" />
+        <img src="72x72\32-20e3.png" title="32-20e3.png" />
+        <img src="72x72\3297.png" title="3297.png" />
+        <img src="72x72\3299.png" title="3299.png" />
+        <img src="72x72\33-20e3.png" title="33-20e3.png" />
+        <img src="72x72\34-20e3.png" title="34-20e3.png" /><br />
+        <img src="72x72\35-20e3.png" title="35-20e3.png" />
+        <img src="72x72\36-20e3.png" title="36-20e3.png" />
+        <img src="72x72\37-20e3.png" title="37-20e3.png" />
+        <img src="72x72\38-20e3.png" title="38-20e3.png" />
+        <img src="72x72\39-20e3.png" title="39-20e3.png" />
+        <img src="72x72\a9.png" title="a9.png" />
+        <img src="72x72\ae.png" title="ae.png" />
+        <img src="72x72\e50a.png" title="e50a.png" />
+    </div>
+</body>
 </html>
